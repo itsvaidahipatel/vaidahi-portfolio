@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Crimson+Text:wght@400;600&family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .experience-detail-page {
             min-height: 100vh;
             padding: 120px 40px 80px;
-            background: var(--bg);
+            background: linear-gradient(135deg, var(--warm-cream) 0%, var(--soft-beige) 50%, var(--warm-cream) 100%);
         }
         .experience-detail-container {
             max-width: 1000px;
@@ -23,32 +23,37 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--text-medium);
+            color: var(--mocha);
             text-decoration: none;
             margin-bottom: 40px;
-            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
+            letter-spacing: 0.01em;
         }
         .back-link:hover {
-            color: var(--text-dark);
+            color: var(--warm-brown);
         }
         .experience-header {
             display: flex;
             align-items: flex-start;
             gap: 30px;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(193, 122, 95, 0.2);
         }
         .company-logo-large {
-            width: 100px;
-            height: 100px;
-            background: var(--cream);
+            width: 120px;
+            height: 120px;
+            background: white;
             border-radius: 16px;
-            padding: 15px;
+            padding: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 2px 20px rgba(44, 36, 22, 0.06);
+            border: 1px solid rgba(193, 122, 95, 0.1);
         }
         .company-logo-large img {
             width: 100%;
@@ -57,70 +62,99 @@
             object-position: center;
         }
         .experience-title-section h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 10px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+            margin-bottom: 12px;
+            line-height: 1.2;
+            letter-spacing: 0.01em;
         }
         .experience-title-section .company-name {
-            font-size: 1.3rem;
-            color: var(--text-medium);
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            color: var(--terracotta);
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: 0.01em;
         }
         .experience-title-section .timeline {
-            font-size: 1rem;
-            color: var(--text-light);
+            font-family: 'Crimson Text', serif;
+            font-size: 1.05rem;
+            color: var(--mocha);
             font-style: italic;
+            margin-bottom: 20px;
         }
         .experience-content {
             background: white;
             padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            box-shadow: 0 2px 20px rgba(44, 36, 22, 0.06);
+            border: 1px solid rgba(193, 122, 95, 0.08);
         }
         .section-heading {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--text-dark);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--warm-brown);
             margin-bottom: 25px;
-            margin-top: 40px;
+            margin-top: 45px;
+            line-height: 1.3;
+            letter-spacing: 0.01em;
         }
         .section-heading:first-child {
             margin-top: 0;
+        }
+        .experience-content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--warm-brown);
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 0.01em;
         }
         .detail-list {
             list-style: none;
             padding: 0;
         }
         .detail-list li {
-            padding-left: 30px;
-            margin-bottom: 18px;
-            line-height: 1.8;
+            padding-left: 28px;
+            margin-bottom: 16px;
+            line-height: 1.85;
             position: relative;
-            color: var(--text-dark);
+            color: var(--mocha);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
         }
         .detail-list li::before {
             content: '→';
             position: absolute;
             left: 0;
-            color: var(--dusty-blue);
-            font-weight: bold;
-            font-size: 1.2rem;
+            color: var(--terracotta);
+            font-weight: 600;
+            font-size: 1.1rem;
         }
         .highlight-box {
-            background: var(--warm-beige);
-            padding: 25px;
-            border-radius: 10px;
-            margin: 30px 0;
-            border-left: 4px solid var(--text-dark);
+            background: rgba(201, 169, 166, 0.15);
+            padding: 28px;
+            border-radius: 12px;
+            margin: 35px 0;
+            border-left: 4px solid var(--dusty-rose);
+            font-family: 'Crimson Text', serif;
+            font-style: italic;
+            color: var(--warm-brown);
+            line-height: 1.75;
         }
         .highlight-box strong {
             display: block;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+            color: var(--warm-brown);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-style: normal;
         }
     </style>
 </head>
@@ -155,7 +189,7 @@
 
             <div class="experience-content">
                 <h2 class="section-heading">Overview</h2>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 30px;">
+                <p>
                     Worked as a Software Developer Intern focusing on automation and data integration. 
                     Developed Python scripts for performance reporting and integrated Zoho APIs for automated data retrieval and synchronization.
                 </p>
@@ -187,15 +221,6 @@
                     Improved data transparency across the organization through automated systems.
                 </div>
 
-                <h2 class="section-heading">Technologies & Tools</h2>
-                <ul class="detail-list">
-                    <li>Python (Scripting and automation)</li>
-                    <li>Zoho REST APIs (Data integration)</li>
-                    <li>AWS EC2 (Cloud deployment)</li>
-                    <li>CI/CD Pipelines (Automated deployment)</li>
-                    <li>Data Aggregation (Performance metrics)</li>
-                    <li>Dashboard Integration (Real-time synchronization)</li>
-                </ul>
             </div>
         </div>
     </div>

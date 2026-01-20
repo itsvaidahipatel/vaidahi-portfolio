@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxgen Technology - Software Developer Intern | Vaidahi Patel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .experience-detail-page {
+            min-height: 100vh;
+            padding: 120px 40px 80px;
+            background: var(--bg);
+        }
+        .experience-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-medium);
+            text-decoration: none;
+            margin-bottom: 40px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: var(--text-dark);
+        }
+        .experience-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        }
+        .company-logo-large {
+            width: 100px;
+            height: 100px;
+            background: var(--cream);
+            border-radius: 16px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .company-logo-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        .experience-title-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+        .experience-title-section .company-name {
+            font-size: 1.3rem;
+            color: var(--text-medium);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .experience-title-section .timeline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        .experience-content {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+        }
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            margin-top: 40px;
+        }
+        .section-heading:first-child {
+            margin-top: 0;
+        }
+        .detail-list {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-list li {
+            padding-left: 30px;
+            margin-bottom: 18px;
+            line-height: 1.8;
+            position: relative;
+            color: var(--text-dark);
+        }
+        .detail-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--dusty-blue);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .highlight-box {
+            background: var(--warm-beige);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid var(--text-dark);
+        }
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo"><a href="index.html" style="text-decoration: none; color: inherit;">VP</a></div>
+            <div class="nav-links">
+                <a href="index.html#intro" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="experience-detail-page">
+        <div class="experience-detail-container">
+            <a href="index.html#experience" class="back-link">← Back to Experience</a>
+            
+            <div class="experience-header">
+                <div class="company-logo-large">
+                    <img src="images/maxgen-logo.png" alt="Maxgen Technology" onerror="this.onerror=null; this.src='images/maxgen-logo.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/100/1A1A1A/FFFFFF?text=MT';}">
+                </div>
+                <div class="experience-title-section">
+                    <h1>Software Developer Intern</h1>
+                    <div class="company-name">Maxgen Technology Pvt Ltd</div>
+                    <div class="timeline">January 2023 – July 2023</div>
+                </div>
+            </div>
+
+            <div class="experience-content">
+                <h2 class="section-heading">Overview</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 30px;">
+                    Worked as a Software Developer Intern focusing on automation and data integration. 
+                    Developed Python scripts for performance reporting and integrated Zoho APIs for automated data retrieval and synchronization.
+                </p>
+
+                <h2 class="section-heading">Key Achievements</h2>
+                <ul class="detail-list">
+                    <li>Automated performance reporting for 1,200 employees by developing Python scripts that aggregated 8 key performance metrics</li>
+                    <li>Improved data transparency and saved 15 hours per week</li>
+                    <li>Reduced manual data entry by 40% by integrating Zoho REST APIs for automated data retrieval and dashboard synchronization</li>
+                    <li>Automated deployment of Python scripts on AWS EC2 by configuring CI/CD pipeline</li>
+                    <li>Enabled seamless delivery of performance reports to employee dashboards and email</li>
+                    <li>Maintained compliance with data handling protocols</li>
+                </ul>
+
+                <h2 class="section-heading">Technical Contributions</h2>
+                <ul class="detail-list">
+                    <li>Developed Python scripts aggregating 8 key performance metrics for 1,200 employees</li>
+                    <li>Integrated Zoho REST APIs for automated data retrieval and synchronization</li>
+                    <li>Built automated dashboard synchronization system</li>
+                    <li>Configured CI/CD pipeline for automated deployment on AWS EC2</li>
+                    <li>Implemented email and dashboard delivery systems for performance reports</li>
+                    <li>Ensured compliance with data handling protocols and security standards</li>
+                    <li>Created scalable automation solutions reducing manual work significantly</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Impact:</strong>
+                    Streamlined performance reporting processes, saving 15 hours per week and reducing manual data entry by 40%. 
+                    Improved data transparency across the organization through automated systems.
+                </div>
+
+                <h2 class="section-heading">Technologies & Tools</h2>
+                <ul class="detail-list">
+                    <li>Python (Scripting and automation)</li>
+                    <li>Zoho REST APIs (Data integration)</li>
+                    <li>AWS EC2 (Cloud deployment)</li>
+                    <li>CI/CD Pipelines (Automated deployment)</li>
+                    <li>Data Aggregation (Performance metrics)</li>
+                    <li>Dashboard Integration (Real-time synchronization)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

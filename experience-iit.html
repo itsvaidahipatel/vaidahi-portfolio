@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Gandhinagar - Full Stack Developer | Vaidahi Patel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .experience-detail-page {
+            min-height: 100vh;
+            padding: 120px 40px 80px;
+            background: var(--bg);
+        }
+        .experience-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-medium);
+            text-decoration: none;
+            margin-bottom: 40px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: var(--text-dark);
+        }
+        .experience-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        }
+        .company-logo-large {
+            width: 100px;
+            height: 100px;
+            background: var(--cream);
+            border-radius: 16px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .company-logo-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        .experience-title-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+        .experience-title-section .company-name {
+            font-size: 1.3rem;
+            color: var(--text-medium);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .experience-title-section .timeline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        .experience-content {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+        }
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            margin-top: 40px;
+        }
+        .section-heading:first-child {
+            margin-top: 0;
+        }
+        .detail-list {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-list li {
+            padding-left: 30px;
+            margin-bottom: 18px;
+            line-height: 1.8;
+            position: relative;
+            color: var(--text-dark);
+        }
+        .detail-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--lavender);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .highlight-box {
+            background: var(--sage);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid var(--text-dark);
+        }
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .company-website-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--text-dark);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .company-website-link:hover {
+            background: var(--text-medium);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo"><a href="index.html" style="text-decoration: none; color: inherit;">VP</a></div>
+            <div class="nav-links">
+                <a href="index.html#intro" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="experience-detail-page">
+        <div class="experience-detail-container">
+            <a href="index.html#experience" class="back-link">← Back to Experience</a>
+            
+            <div class="experience-header">
+                <div class="company-logo-large">
+                    <img src="images/iit-logo.png" alt="IIT Gandhinagar" onerror="this.onerror=null; this.src='images/iit-logo.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/100/1A1A1A/FFFFFF?text=IIT';}">
+                </div>
+                <div class="experience-title-section">
+                    <h1>Full Stack Developer & Research Assistant</h1>
+                    <div class="company-name">Indian Institute of Technology (IIT Gandhinagar)</div>
+                    <div class="timeline">August 2023 – December 2023</div>
+                    <a href="https://lingo.iitgn.ac.in/codemixing/#" target="_blank" rel="noopener noreferrer" class="company-website-link">
+                        Visit Project →
+                    </a>
+                </div>
+            </div>
+
+            <div class="experience-content">
+                <h2 class="section-heading">Overview</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 30px;">
+                    Worked as a Full Stack Developer and Research Assistant on a multilingual text annotation platform. 
+                    Focused on building scalable data pipelines, optimizing database performance, and implementing containerized deployments.
+                </p>
+
+                <h2 class="section-heading">Key Achievements</h2>
+                <ul class="detail-list">
+                    <li>Built real-time data ingestion pipeline handling 1M+ events/hour via custom API, using Apache Kafka for queuing and stream processing</li>
+                    <li>Achieved 90% lower data loss through scalable ingestion design</li>
+                    <li>Reduced query latency by 35% on 1M+ sample datasets by designing optimized MongoDB schema and indexing strategy</li>
+                    <li>Containerized and deployed application on AWS EC2 using Docker</li>
+                    <li>Implemented automated CI/CD pipelines and test suites achieving 95% test coverage</li>
+                    <li>Enabled zero-downtime deployments</li>
+                </ul>
+
+                <h2 class="section-heading">Technical Contributions</h2>
+                <ul class="detail-list">
+                    <li>Developed real-time data ingestion pipeline processing 1M+ tweets/hour</li>
+                    <li>Built custom API with Apache Kafka for queuing and stream processing</li>
+                    <li>Designed optimized MongoDB schema and indexing strategy for multilingual text data</li>
+                    <li>Built multilingual text annotation platform using FastAPI and React</li>
+                    <li>Containerized application using Docker and deployed on AWS EC2</li>
+                    <li>Implemented automated CI/CD pipelines with comprehensive test suites</li>
+                    <li>Achieved 95% test coverage ensuring high code quality</li>
+                    <li>Enabled zero-downtime deployments through container orchestration</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Impact:</strong>
+                    Created a scalable data processing system capable of handling millions of events per hour with minimal data loss. 
+                    Significantly improved query performance and established robust deployment practices.
+                </div>
+
+                <h2 class="section-heading">Technologies & Tools</h2>
+                <ul class="detail-list">
+                    <li>FastAPI (Backend framework)</li>
+                    <li>React (Frontend framework)</li>
+                    <li>MongoDB (NoSQL database)</li>
+                    <li>Apache Kafka (Stream processing)</li>
+                    <li>Docker (Containerization)</li>
+                    <li>AWS EC2 (Cloud deployment)</li>
+                    <li>CI/CD Pipelines (Automated deployment)</li>
+                    <li>Python (Backend development)</li>
+                    <li>JavaScript/TypeScript (Frontend development)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Panel Systems - Software Engineer Co-op | Vaidahi Patel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .experience-detail-page {
+            min-height: 100vh;
+            padding: 120px 40px 80px;
+            background: var(--bg);
+        }
+        .experience-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-medium);
+            text-decoration: none;
+            margin-bottom: 40px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: var(--text-dark);
+        }
+        .experience-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        }
+        .company-logo-large {
+            width: 100px;
+            height: 100px;
+            background: var(--cream);
+            border-radius: 16px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .company-logo-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        .experience-title-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+        .experience-title-section .company-name {
+            font-size: 1.3rem;
+            color: var(--text-medium);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .experience-title-section .timeline {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        .experience-content {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+        }
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            margin-top: 40px;
+        }
+        .section-heading:first-child {
+            margin-top: 0;
+        }
+        .detail-list {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-list li {
+            padding-left: 30px;
+            margin-bottom: 18px;
+            line-height: 1.8;
+            position: relative;
+            color: var(--text-dark);
+        }
+        .detail-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--soft-pink);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .highlight-box {
+            background: var(--dusty-blue);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid var(--text-dark);
+        }
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo"><a href="index.html" style="text-decoration: none; color: inherit;">VP</a></div>
+            <div class="nav-links">
+                <a href="index.html#intro" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="experience-detail-page">
+        <div class="experience-detail-container">
+            <a href="index.html#experience" class="back-link">← Back to Experience</a>
+            
+            <div class="experience-header">
+                <div class="company-logo-large">
+                    <img src="images/fortune-logo.png" alt="Fortune Panel Systems" onerror="this.onerror=null; this.src='images/fortune-logo.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/100/1A1A1A/FFFFFF?text=FPS';}">
+                </div>
+                <div class="experience-title-section">
+                    <h1>Software Engineer Co-op</h1>
+                    <div class="company-name">Fortune Panel Systems</div>
+                    <div class="timeline">January 2022 – December 2022</div>
+                </div>
+            </div>
+
+            <div class="experience-content">
+                <h2 class="section-heading">Overview</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-dark); margin-bottom: 30px;">
+                    Worked as a Software Engineer Co-op on an IoT-based data processing system for road construction plants. 
+                    Focused on building real-time monitoring dashboards, data collection systems, and optimizing visualization performance.
+                </p>
+
+                <h2 class="section-heading">Key Achievements</h2>
+                <ul class="detail-list">
+                    <li>Aided in creating IoT-based data processing system using TLS-secured WebSockets to collect and stream telemetry from 1,000+ road construction plants</li>
+                    <li>Collected aggregate TPH, bitumen %, filler %, GPS coordinates, and other machine telemetry data</li>
+                    <li>Built and integrated dynamic Razor Pages dashboards and data-entry forms with Excel export and search functionality</li>
+                    <li>Enabled operators, engineers, and customers to monitor machine performance, production metrics, and location data in real time</li>
+                    <li>Optimized ASP.NET Core Razor Pages dashboards with server-side rendering and on-demand data fetching</li>
+                    <li>Enabled seamless real-time visualization of machine telemetry for operators and clients</li>
+                </ul>
+
+                <h2 class="section-heading">Technical Contributions</h2>
+                <ul class="detail-list">
+                    <li>Created IoT-based data processing system connecting 1,000+ road construction plants</li>
+                    <li>Implemented TLS-secured WebSockets for secure telemetry collection</li>
+                    <li>Streamed telemetry data (aggregate TPH, bitumen %, filler %, GPS coordinates) to centralized PostgreSQL database</li>
+                    <li>Built dynamic Razor Pages dashboards with real-time visualization</li>
+                    <li>Created data-entry forms with Excel export and search functionality</li>
+                    <li>Optimized dashboards with server-side rendering for better performance</li>
+                    <li>Implemented on-demand data fetching via AJAX/SignalR for real-time updates</li>
+                    <li>Enabled multi-user access for operators, engineers, and customers</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Impact:</strong>
+                    Created a comprehensive IoT monitoring system connecting 1,000+ devices, enabling real-time monitoring of road construction operations. 
+                    Improved operational visibility and decision-making through dynamic dashboards and data visualization.
+                </div>
+
+                <h2 class="section-heading">Technologies & Tools</h2>
+                <ul class="detail-list">
+                    <li>ASP.NET Core (Backend framework)</li>
+                    <li>Razor Pages (Server-side rendering)</li>
+                    <li>PostgreSQL (Database)</li>
+                    <li>WebSockets (Real-time communication)</li>
+                    <li>TLS (Secure connections)</li>
+                    <li>SignalR (Real-time updates)</li>
+                    <li>AJAX (Asynchronous data fetching)</li>
+                    <li>IoT (Device connectivity)</li>
+                    <li>C# (Backend development)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

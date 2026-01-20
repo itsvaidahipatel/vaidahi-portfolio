@@ -152,11 +152,11 @@ body {
    HERO SECTION - Compact
    ============================================ */
 .hero-section {
-    min-height: 70vh;
+    min-height: 45vh;
     display: flex;
     align-items: center;
-    padding: 80px 40px;
-    padding-top: 120px;
+    padding: 50px 40px;
+    padding-top: 100px;
     background: linear-gradient(135deg, var(--warm-cream) 0%, var(--soft-beige) 50%, var(--warm-cream) 100%);
     position: relative;
     z-index: 1;
@@ -203,10 +203,10 @@ body {
 
 .hero-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 600;
     color: var(--warm-brown);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     line-height: 1.15;
     letter-spacing: 0.01em;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -219,10 +219,10 @@ body {
 
 .hero-subtitle {
     font-family: 'Crimson Text', serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--mocha);
     font-weight: 400;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     line-height: 1.7;
     letter-spacing: 0.01em;
     font-style: italic;

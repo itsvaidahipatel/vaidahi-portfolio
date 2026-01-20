@@ -86,33 +86,51 @@ function initNumberAnimations() {
 }
 
 function animateNumber(element) {
-    const target = parseInt(element.getAttribute('data-target'));
+    const target = parseFloat(element.getAttribute('data-target'));
     const duration = 1500;
     const steps = 60;
     const increment = target / steps;
     const stepDuration = duration / steps;
     
+    // Get the suffix based on description
+    const statItem = element.closest('.stat-item-compact');
+    const description = statItem ? statItem.querySelector('.stat-description').textContent.trim() : '';
+    let suffix = '';
+    
+    if (description === 'APIs Built' || description === 'Users Served') {
+        suffix = '+';
+    } else if (description === '% Test coverage' || description === 'Uptime') {
+        suffix = '%';
+    }
+    
     let current = 0;
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
-            element.textContent = formatNumber(target);
+            element.textContent = formatNumber(target, suffix);
             clearInterval(timer);
         } else {
-            element.textContent = formatNumber(Math.floor(current));
+            // For decimals, preserve decimal during animation; for integers, floor
+            const displayValue = target % 1 !== 0 ? parseFloat(current.toFixed(1)) : Math.floor(current);
+            element.textContent = formatNumber(displayValue, suffix);
         }
     }, stepDuration);
 }
 
-function formatNumber(num) {
-    if (num >= 1000000) {
-        const millions = num / 1000000;
-        return millions % 1 === 0 ? millions + 'M' : millions.toFixed(1) + 'M';
-    } else if (num >= 1000) {
-        const thousands = num / 1000;
-        return thousands % 1 === 0 ? thousands + 'K' : thousands.toFixed(1) + 'K';
+function formatNumber(num, suffix = '') {
+    const numValue = typeof num === 'string' ? parseFloat(num) : num;
+    let formatted;
+    if (numValue >= 1000000) {
+        const millions = numValue / 1000000;
+        formatted = millions % 1 === 0 ? millions + 'M' : millions.toFixed(1) + 'M';
+    } else if (numValue >= 1000) {
+        const thousands = numValue / 1000;
+        formatted = thousands % 1 === 0 ? thousands + 'K' : thousands.toFixed(1) + 'K';
+    } else {
+        // For decimal numbers like 99.5, preserve the decimal
+        formatted = numValue % 1 === 0 ? numValue.toString() : numValue.toFixed(1);
     }
-    return num.toString();
+    return formatted + suffix;
 }
 
 // ============================================
